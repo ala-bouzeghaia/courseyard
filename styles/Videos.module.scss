@@ -1,0 +1,286 @@
+@import "./variables";
+
+.alert {
+  height: 100%;
+  width: 85vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.container {
+  height: 100%;
+  width: 85vw;
+  display: flex;
+  justify-content: space-between;
+}
+
+.video-container {
+  width: 100%;
+  height: 100vh;
+  margin-right: 10px;
+  overflow-y: hidden;
+}
+.player {
+  width: 100%;
+  height: 50vh;
+}
+
+.chapters-list {
+  display: flex;
+  flex-direction: column;
+  max-width: 30%;
+  max-height: 100vh;
+  overflow-y: auto;
+  margin-right: 10px;
+  span {
+    padding: 10px;
+    width: 100%;
+  }
+  transition: all 0.5s ease-in-out;
+}
+.open {
+  width: 30%;
+  span,
+  p,
+  h1 {
+    display: unset;
+  }
+  .chapters-section-title {
+    span,
+    p {
+      display: block;
+    }
+  }
+}
+.close {
+  width: 80px;
+  span,
+  p,
+  h1 {
+    display: none;
+  }
+  .chapter-progress {
+    span {
+      display: unset;
+    }
+  }
+}
+
+.chapters-section-title {
+  div {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0 10px;
+    h1 {
+      font-size: min(3vw, 2rem);
+    }
+    svg {
+      margin-top: 5px;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+  p {
+    width: 90%;
+    margin: 0 auto;
+    padding: 0 0 10px 5px;
+    font-weight: 600;
+  }
+  span {
+    width: 90%;
+    height: 20px;
+    margin: 0 auto 10px;
+    border-radius: 10px;
+    background-color: $color_beige;
+    span {
+      background-color: $color_dark_purple;
+    }
+  }
+}
+
+.chapter-container {
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+  &:hover {
+    cursor: pointer;
+    background-color: $color_beige;
+  }
+  span {
+    h4 {
+      margin: 0;
+    }
+    p {
+      margin: 0;
+      display: flex;
+      align-items: center;
+      svg {
+        margin: 2px 5px 0 0;
+      }
+    }
+  }
+}
+
+.chapter-progress {
+  //   padding: 5px 0;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  // width: 20%;
+  position: relative;
+  svg {
+    color: $color_dark_purple;
+    position: absolute;
+    // left: 0;
+  }
+  // div {
+  //   position: relative;
+  // }
+  span {
+    padding: 0;
+  }
+}
+.player-icon-locked {
+  left: calc(50% - 10px);
+}
+// .circular-progressbar {
+//   height: 50px;
+//   width: 50px;
+//   // display: flex;
+//   // align-items: center;
+//   // svg {
+//   //   position: relative;
+//   // }
+// }
+// #CircularProgressbarWithChildren__children {
+//   position: relative;
+// }
+
+// .lock-icon {
+//   background-color: red;
+// }
+
+.notes-container {
+  width: 100%;
+  max-height: 38%;
+  overflow-y: scroll;
+  padding-right: 10px;
+}
+.notes-input {
+  div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  p {
+    display: flex;
+    span {
+      font-size: 20px;
+      // padding-top: 5px;
+    }
+    svg {
+      margin-right: 10px;
+    }
+    &:hover {
+      cursor: pointer;
+    }
+    // textarea {
+    //   // display: inline-block;
+    //   width: 100%;
+    //   height: 10rem;
+    //   resize: none;
+    // }
+  }
+  textarea {
+    // margin: 0 auto;
+    width: 100%;
+    height: 10rem;
+    resize: none;
+    border: 1px solid;
+    border-radius: 5px;
+  }
+}
+.open-textarea {
+  display: inline-block;
+  width: 100%;
+  height: 10rem;
+  resize: none;
+}
+.close-textarea {
+  display: none;
+}
+
+.buttons {
+  p {
+    border: none;
+    background: none;
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+    &:hover {
+      cursor: pointer;
+    }
+    svg {
+      margin-right: 5px;
+      // margin-top: 2px;
+    }
+    span {
+      font-size: 14px;
+    }
+  }
+}
+.hide-buttons {
+  p {
+    display: none;
+  }
+}
+.show-buttons {
+  p {
+    display: flex;
+    margin-left: 10px;
+  }
+}
+
+.notes-list {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.note {
+  border: 1px solid;
+  border-radius: 5px;
+  margin: 5px 0;
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+  p {
+    padding: 0 10px;
+    width: 90%;
+    white-space: pre-line;
+  }
+  .timecode {
+    font-weight: 700;
+    width: max-content;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  svg {
+    margin-left: 5px;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  div {
+    display: flex;
+    align-items: center;
+    padding-right: 10px;
+    margin: 1rem 0;
+  }
+}
