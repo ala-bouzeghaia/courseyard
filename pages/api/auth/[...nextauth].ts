@@ -3,7 +3,6 @@ import NextAuth, {
   Profile,
   User,
   Session,
-  DefaultSession,
   SessionStrategy,
 } from "next-auth";
 import { JWT } from "next-auth/jwt";
@@ -32,9 +31,6 @@ export const authOptions = {
   pages: {
     signIn: "../../signin",
     signOut: "../../signout",
-    // error: '/auth/error', // Error code passed in query string as ?error=
-    // verifyRequest: '/auth/verify-request', // (used for check email message)
-    // newUser: '/auth/new-user' // New users will be directed here on first sign in (leave the property out if not of interest)
   },
   callbacks: {
     async jwt({
@@ -47,13 +43,10 @@ export const authOptions = {
       profile?: Profile;
       isNexUser?: boolean;
     }) {
-      //   if (user) {
-      //     token.id = user.id;
-      //   }
       if (account) {
         token.accessToken = account.access_token;
       }
-      return token /* { ...token, accessToken: account?.access_token, id: user?.id } */;
+      return token;
     },
     async session({ session, token }: { session: Session; token: JWT }) {
       if (session.user) {
