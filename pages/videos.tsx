@@ -184,6 +184,7 @@ const Videos = () => {
               );
             });
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   useEffect(() => {
@@ -205,6 +206,7 @@ const Videos = () => {
         : elt
     );
     localStorage.setItem("courses", JSON.stringify(newCourseList));
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [chapters, notesList]);
 
   useEffect(() => {
@@ -259,11 +261,13 @@ const Videos = () => {
         // setProgression(chapters ? globalProgress : currentTime / duration);
       };
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [currentTime]);
 
   useEffect(() => {
     // if(playerRef.current.internalPlayer.gerPlayerState === 1)
     const interval = setInterval(() => {
+      // eslint-disable-next-line react-hooks/exhaustive-deps
       activeChapter = chapters?.filter(
         (chapter) =>
           currentTime <

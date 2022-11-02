@@ -12,6 +12,7 @@ const SignIn = (props: { providers: BuiltInProviderType }) => {
 
   useEffect(() => {
     if (session) router.push("/");
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [session]);
 
   return (

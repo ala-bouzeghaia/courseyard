@@ -1,3 +1,5 @@
+/* eslint-disable @next/next/no-img-element */
+
 import axios from "axios";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
@@ -151,8 +153,9 @@ const Courses = () => {
     }
     if (localStorage.getItem("courses") !== null) {
       setCourseList([...JSON.parse(localStorage.getItem("courses") as string)]);
-      console.log(courseList);
+      // console.log(courseList);
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   useEffect(() => {
@@ -201,7 +204,7 @@ const Courses = () => {
           ]);
         })
       );
-    console.log("suggestions", suggestionList);
+    // console.log("suggestions", suggestionList);
   }, [isSuggestionDisplayed]);
 
   return (
@@ -298,6 +301,7 @@ const CourseCard = (props: Props) => {
           : 0
       );
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (

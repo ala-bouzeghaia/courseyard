@@ -276,6 +276,7 @@ const EventForm = (props: EventFormProps) => {
       textareaRef.current.value = props.isEventClicked
         ? props.modifiedEvent.description
         : "";
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [props.modifiedEvent]);
 
   const closeForm = () => {
