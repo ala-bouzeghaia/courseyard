@@ -158,21 +158,21 @@
   left: calc(50% - 10px);
 }
 
-@media (max-width: 425px) {
-  .chapters-list {
-    width: 80px;
-    span,
-    p,
-    h1 {
-      display: none;
-    }
-  }
-  .chapter-progress {
-    span {
-      display: unset;
-    }
-  }
-}
+// @media (max-width: 425px) {
+//   .chapters-list {
+//     width: 80px;
+//     span,
+//     p,
+//     h1 {
+//       display: none;
+//     }
+//   }
+//   .chapter-progress {
+//     span {
+//       display: unset;
+//     }
+//   }
+// }
 
 .notes-container {
   width: 100%;
