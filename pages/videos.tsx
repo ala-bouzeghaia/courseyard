@@ -351,6 +351,12 @@ const Videos = () => {
     setOpenNoteTextarea(false);
   };
 
+  useEffect(() => {
+    if (window.innerWidth <= 500) {
+      setOpenChaptersSideBar(false);
+    }
+  }, []);
+
   return (
     <>
       {videoId === "" ? (

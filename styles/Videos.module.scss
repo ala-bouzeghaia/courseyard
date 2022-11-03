@@ -35,7 +35,8 @@
   display: flex;
   flex-direction: column;
   // max-width: 30%;
-  width: 50%;
+  // width: 50%;
+  width: max-content;
   max-height: 100vh;
   overflow-y: auto;
   margin-right: 10px;
@@ -48,7 +49,7 @@
 
 .open {
   // width: 30%;
-  width: 50%;
+  // width: 50%;
   span,
   p,
   h1 {
