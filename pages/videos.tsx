@@ -10,9 +10,6 @@ import Note from "../components/Note";
 import Chapter from "../components/Chapter";
 import { useVideo } from "../context/VideoContext";
 
-// const API_KEY = "AIzaSyDL9vaXahEvZHo8C40h4DvTMq8YpNfqf1o";
-// const API_KEY = process.env.NEXT_PUBLIC_API_KEY as string;
-
 const getVideoDescription = async (id: string): Promise<string> => {
   const res = await axios.get(
     `https://www.googleapis.com/youtube/v3/videos?part=snippet&key=${process.env.NEXT_PUBLIC_API_KEY}&id=${id}`
@@ -407,8 +404,6 @@ const Videos = () => {
             ))}
           </div>
           <div className={styles["video-container"]}>
-            <h1>Videos</h1>
-
             <YouTube
               videoId={videoId}
               className={styles.player}
